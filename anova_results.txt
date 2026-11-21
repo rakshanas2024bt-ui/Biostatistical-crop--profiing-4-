@@ -1,0 +1,60 @@
+--- Variety ---
+              Df    Sum Sq Mean Sq F value
+variety        2   1090850  545425   6.827
+Residuals   2786 222581792   79893        
+            Pr(>F)   
+variety     0.0011 **
+Residuals            
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey post-hoc (variety) ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = yield_kg_ha ~ variety, data = paddy_merged)
+
+$variety
+                         diff       lwr
+delux ponni-CO_43    14.38650 -17.88177
+ponmani-CO_43       -30.77918 -62.62599
+ponmani-delux ponni -45.16568 -74.40847
+                           upr     p adj
+delux ponni-CO_43    46.654767 0.5482024
+ponmani-CO_43         1.067631 0.0607918
+ponmani-delux ponni -15.922886 0.0008691
+
+
+--- Soil ---
+              Df    Sum Sq Mean Sq F value
+soil_types     1      3480    3480   0.043
+Residuals   2787 223669162   80254        
+            Pr(>F)
+soil_types   0.835
+Residuals         
+
+--- Agriblock ---
+              Df    Sum Sq Mean Sq F value
+agriblock      5    288486   57697   0.719
+Residuals   2783 223384156   80267        
+            Pr(>F)
+agriblock    0.609
+Residuals         
+
+--- Variety x Soil ---
+                     Df    Sum Sq Mean Sq
+variety               2   1090850  545425
+soil_types            1      2540    2540
+variety:soil_types    2    132707   66353
+Residuals          2783 222446546   79930
+                   F value  Pr(>F)   
+variety              6.824 0.00111 **
+soil_types           0.032 0.85853   
+variety:soil_types   0.830 0.43610   
+Residuals                            
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+eta squared (variety): 0.004876995 
